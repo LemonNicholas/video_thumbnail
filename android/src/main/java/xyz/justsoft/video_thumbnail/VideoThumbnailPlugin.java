@@ -143,10 +143,11 @@ public class VideoThumbnailPlugin implements FlutterPlugin, MethodCallHandler {
         String fullpath = vidPath.substring(0, i + 1) + ext;
         final boolean isLocalFile = (vidPath.startsWith("/") || vidPath.startsWith("file://"));
 
-        if (path == null && !isLocalFile) {
-            path = context.getCacheDir().getAbsolutePath();
-        }
+//        if (path == null && !isLocalFile) {
+//            path = context.getCacheDir().getAbsolutePath();
+//        }
 
+        path = context.getCacheDir().getAbsolutePath();
         if (path != null) {
             if (path.endsWith(ext)) {
                 fullpath = path;
